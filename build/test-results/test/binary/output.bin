@@ -1,0 +1,35 @@
+Request method:	POST
+-Request URI:	https://reqres.in/api/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+#				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "pistol",
+    "password": "pistol"
+}
+HTTP/1.1 400 Bad Request
+%Date: Wed, 17 Aug 2022 21:15:11 GMT
+/Content-Type: application/json; charset=utf-8
+Content-Length: 57
+Connection: keep-alive
+X-Powered-By: Express
+ Access-Control-Allow-Origin: *
+*Etag: W/"39-6jrJxn+7f+pQUhbPgNMst7tagpA"
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+dExpect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+üReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=cnOm6m5jMxMmocBMk%2BRwGjz5TefwCDo07SE4e5q4yMufyrEi%2FVDlZFGDXfKyAhjHAefEBWdLyeRQJAorUxEUs7TLYHmOkNKlvCnXSbVLl%2BGrKrRM2v0R2Imoug%3D%3D"}],"group":"cf-nel","max_age":604800}
+CNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 73c56c737a9ea608-GRU
+
+{
+=    "error": "Note: Only defined users succeed registration"
+}
