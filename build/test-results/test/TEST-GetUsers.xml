@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GetUsers" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-08-28T23:30:45" hostname="ZUP-5593" time="5.038">
+  <properties/>
+  <testcase name="Buscar usuário com 1 page e 1 por página" classname="GetUsers" time="3.496"/>
+  <testcase name="Buscar usuário com 2 page e 1 por página" classname="GetUsers" time="0.835"/>
+  <testcase name="Buscar usuário com 3 page e 1 por página" classname="GetUsers" time="0.7"/>
+  <system-out><![CDATA[Rodando todos os testes em 1, 2, 3!
+Rodando o teste logo em seguida
+HTTP/1.1 200 OK
+Date: Sun, 28 Aug 2022 23:30:51 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Etag: W/"14c-ICYZ3vVSXqF4ruqz+RfiXAfJbME"
+Via: 1.1 vegur
+Cache-Control: max-age=14400
+CF-Cache-Status: MISS
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mDeIc%2B3yjHWnvrclM87TtML3gXvJR1tX80hah9ucF%2BgXELxx3nA90AVB9q930BPITx6wzC0L5mqUEf1ytKuaL2vG6nKOALd8vMzasNv1zHxC8UwdfNAG%2BrCHvA%3D%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 7420d64af97ba47a-GRU
+Content-Encoding: gzip
+
+{
+    "page": 1,
+    "per_page": 1,
+    "total": 12,
+    "total_pages": 12,
+    "data": [
+        {
+            "id": 1,
+            "email": "george.bluth@reqres.in",
+            "first_name": "George",
+            "last_name": "Bluth",
+            "avatar": "https://reqres.in/img/faces/1-image.jpg"
+        }
+    ],
+    "support": {
+        "url": "https://reqres.in/#support-heading",
+        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+}
+Rodando o teste logo em seguida
+HTTP/1.1 200 OK
+Date: Sun, 28 Aug 2022 23:30:52 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Etag: W/"14c-akQAbh5JXltZwHwvOj60aXYbrrc"
+Via: 1.1 vegur
+Cache-Control: max-age=14400
+CF-Cache-Status: MISS
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fwTEyLfUK3yHw%2BhMdUFC6lvhRB%2BJCdpPhpodRbr3k09qmmIQ7WUAMqUJ%2FqkGoLD5HhNg%2F0URBURX7sCUIW9PYcRDAHAmjpv0Ei3lqpmaJHp6R%2Fz0pWjfCWfReQ%3D%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 7420d6502e5da5d7-GRU
+Content-Encoding: gzip
+
+{
+    "page": 2,
+    "per_page": 1,
+    "total": 12,
+    "total_pages": 12,
+    "data": [
+        {
+            "id": 2,
+            "email": "janet.weaver@reqres.in",
+            "first_name": "Janet",
+            "last_name": "Weaver",
+            "avatar": "https://reqres.in/img/faces/2-image.jpg"
+        }
+    ],
+    "support": {
+        "url": "https://reqres.in/#support-heading",
+        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+}
+Rodando o teste logo em seguida
+HTTP/1.1 200 OK
+Date: Sun, 28 Aug 2022 23:30:52 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+Etag: W/"146-ygQ5uRdU2frUtppTO7NiVfvvN0M"
+Via: 1.1 vegur
+Cache-Control: max-age=14400
+CF-Cache-Status: MISS
+Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=z1VdW57fNBPZJeVDrYW8CprGSwWzLHkLIHKV7JXAuToZuGgh6mY0fclpStd4z2l7w9dbnYUb7Ans5nng9hT22VBn13Xm%2BORdReAi84Bcz9TKhF5E1ehq3sNuwQ%3D%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 7420d6556ab0a492-GRU
+Content-Encoding: gzip
+
+{
+    "page": 3,
+    "per_page": 1,
+    "total": 12,
+    "total_pages": 12,
+    "data": [
+        {
+            "id": 3,
+            "email": "emma.wong@reqres.in",
+            "first_name": "Emma",
+            "last_name": "Wong",
+            "avatar": "https://reqres.in/img/faces/3-image.jpg"
+        }
+    ],
+    "support": {
+        "url": "https://reqres.in/#support-heading",
+        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

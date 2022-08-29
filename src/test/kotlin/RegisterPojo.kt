@@ -1,7 +1,7 @@
 import kotlinx.serialization.Serializable
 
 @Serializable
-class LoginPojo {
+class RegisterPojo {
     var email:String? = null
     var password:String? = null
 }

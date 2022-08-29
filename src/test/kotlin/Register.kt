@@ -5,7 +5,7 @@ import io.restassured.module.kotlin.extensions.When
 import org.junit.jupiter.api.Test
 import java.util.HashMap
 
-class Login {
+class Register : Base() {
 
     fun register01() {
         val jsonString: String =
@@ -15,11 +15,12 @@ class Login {
                     "\n" +"}"
 
         Given {
+            spec(specificationBase())
             contentType(ContentType.JSON)
             body(jsonString)
             log().all()
         } When {
-            post("https://reqres.in/api/register")
+            post("register")
         } Then {
             log().all()
         }
@@ -32,6 +33,7 @@ class Login {
         jsonHashMap["email"] = "eve.holt@reqres.in"
 
         Given {
+            spec(specificationBase())
             contentType(ContentType.JSON)
             body(jsonHashMap)
             log().all()
@@ -43,52 +45,54 @@ class Login {
     }
 
     fun register03() {
-        val loginPojo = LoginPojo()
-        loginPojo.password = "pistol"
-        loginPojo.email = "pistol"
+        val registerPojo = RegisterPojo()
+        registerPojo.password = "pistol"
+        registerPojo.email = "pistol"
 
         Given {
+            spec(specificationBase())
             contentType(ContentType.JSON)
-            body(loginPojo)
+            body(registerPojo)
             log().all()
         } When {
-            post("https://reqres.in/api/register")
+            post("register")
         } Then {
             log().all()
         }
     }
 
-    fun register04(loginPojo: LoginPojo) {
+    fun register04(registerPojo: RegisterPojo) {
         Given {
+            spec(specificationBaseToken())
             contentType(ContentType.JSON)
-            body(loginPojo)
+            body(registerPojo)
             log().all()
         } When {
-            post("https://reqres.in/api/register")
+            post("register")
         } Then {
             log().all()
         }
     }
 
-    private val loginFactory = LoginFactory()
+    private val registerFactory = RegisterFactory()
 
     @Test
     fun registerTest() {
-        register03()
+        register01()
     }
 
     @Test
     fun registerSuccessTest() {
-        register04(loginFactory.registerSuccess())
+        register04(registerFactory.registerSuccess())
     }
 
     @Test
     fun registerFailureTest() {
-        register04(loginFactory.registerUnsuccessful())
+        register04(registerFactory.registerUnsuccessful())
     }
 
     @Test
     fun registerUserNotFound() {
-        register04(loginFactory.registerUserNotFound())
+        register04(registerFactory.registerUserNotFound())
     }
 }
